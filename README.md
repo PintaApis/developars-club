@@ -1,6 +1,8 @@
 # Developars.club
 
-Plataforma de perfiles de desarrollo. Creada por y para la comunidad. Con propósitos educativos con la idea de crear un producto.
+Plataforma de perfiles de desarrollo. Creada por y para la comunidad. 
+
+Con propósitos educativos con la idea de crear un producto.
 
 ## ¿Cómo está estructurado el código?
 
