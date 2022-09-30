@@ -1,33 +1,30 @@
-# Turborepo starter
+# Developars.club
 
-This is an official npm starter turborepo.
+Plataforma de perfiles de desarrollo. Creada por y para la comunidad. Con propósitos educativos con la idea de crear un producto.
 
-## What's inside?
+## ¿Cómo está estructurado el código?
 
-This turborepo uses [npm](https://www.npmjs.com/) as a package manager. It includes the following packages/apps:
+Este proyecto utiliza [Turborepo](https://turborepo.com/) para manejar los paquetes de forma monorepo. Cada paquete tiene su propia documentación y se encuentra en la carpeta `packages`. Las aplicaciones se encuentran en la capreta `apps`.
 
-### Apps and Packages
+Este turborepo usa [npm](https://www.npmjs.com/) como package manager. Incluye los siguientes packages/apps:
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+### Apps y Paquetes
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- `web`: Aplicación [Next.js](https://nextjs.org). Frontend de la plataforma
+- `eslint-config-custom`: Configuraciones de `eslint` (incluye `eslint-config-next` y `eslint-config-prettier`)
+- `tsconfig`: fichero `tsconfig.json`s usado en el monorepo
 
-### Utilities
+### Utilidades
 
-This turborepo has some additional tools already setup for you:
+Este turborepo tiene algunas herramientas adiccionales añadidas y configuradas.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+- [TypeScript](https://www.typescriptlang.org/) para el tipado estático.
+- [ESLint](https://eslint.org/) para el linting.
+- [Prettier](https://prettier.io) para el formateo de código.
 
 ### Build
 
-To build all apps and packages, run the following command:
-
+Para construir el proyecto, se debe ejecutar el siguiente comando:
 ```
 cd my-turborepo
 npm run build
@@ -35,7 +32,7 @@ npm run build
 
 ### Develop
 
-To develop all apps and packages, run the following command:
+Para desarrollar el proyecto, se debe ejecutar el siguiente comando:
 
 ```
 cd my-turborepo
@@ -60,10 +57,26 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```
 npx turbo link
 ```
+---
+## ¿Cómo contribuir al proyecto?
 
-## Useful Links
+Es un proyecto open source, por lo que cualquier persona puede contribuir. Para ello, se debe seguir el siguiente flujo de trabajo:
 
-Learn more about the power of Turborepo:
+1. Crear un fork del proyecto.
+2. Crear una rama con el nombre de la feature que se va a implementar.
+3. Crear un PR con la feature implementada.
+4. Se revisará el PR y se sugerirán los cambios necesarios si es preciso.
+5. Se harán los cambios necesarios y se volverá a revisar el PR.
+6. Se hará merge del PR.
+7. Tu contribución será añadida al proyecto.
+
+Dale un vistazo a la [guía de contribución](CONTRIBUTING.md) para más información.
+
+---
+
+## Links útiles
+
+A continuación se listan algunos links útiles para el desarrollo de este proyecto:
 
 - [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
 - [Caching](https://turborepo.org/docs/core-concepts/caching)
@@ -71,3 +84,7 @@ Learn more about the power of Turborepo:
 - [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
 - [Configuration Options](https://turborepo.org/docs/reference/configuration)
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+
+---
+## Licencia
+MIT &copy; 2022 [PintaAPI Developer Community](https://discord.gg/carlosazaustre)
