@@ -1,30 +1,30 @@
 ## Getting Started
 
-First, run the development server:
+### Modo Desarrollo
+Para ejecutar la app en local, hacerlo desde el directorio `/` raiz del monorepo:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Si quieres ejecutar el servidor de prueba, con datos *mockeados*, muevete al directorio `/apps/web` y ejecuta:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run server:dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Y abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Test e2e
+Si quieres lanzar los tests de aceptación y *end-to-end* de la app, tienes dos formas. Si los quieres  lanzar en modo gráfico, muevete a la carpeta `/apps/web` y ejecuta:
 
-## Learn More
+```bash
+npm run test:e2e:open
+```
+Si quieres correrlos en modo consola, ve a la carpeta raíz `/` y ejecuta:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run test:e2e
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_source=github.com&utm_medium=referral&utm_campaign=turborepo-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Para lanzar los tests, debes tener la aplicación corriendo con `npm run dev` desde la carpeta raíz `/` en otra terminal.
