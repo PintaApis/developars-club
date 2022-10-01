@@ -9,9 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cypress run
-        uses: cypress-io/github-action@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
         with:
-          build: npm run dev
-      - name: Build web app
-        run: npm run build
+          node-version: 14
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Cypress e2e tests
+        run: npm run test:e2e
