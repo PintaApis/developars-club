@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Cypress run on apps/web
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v4
         with:
           working-directory: apps/web
           start: npm run dev
