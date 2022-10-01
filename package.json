@@ -12,7 +12,8 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
-    "e2e": "turbo run e2e"
+    "test:e2e": "turbo run test:e2e",
+    "test:e2e:open": "turbo run test:e2e:open"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
