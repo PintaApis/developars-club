@@ -1,4 +1,3 @@
-import * as React from "react";
-export const Button = ({ text }) => {
+export const Button = ({ text }: { text: String}) => {
   return <button>{text}</button>;
 };
