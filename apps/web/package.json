@@ -20,9 +20,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@developars/tsconfig": "*",
-    "@developars/eslint-config-custom": "*",
     "@babel/core": "^7.0.0",
+    "@developars/eslint-config-custom": "*",
+    "@developars/tsconfig": "*",
     "@types/node": "^17.0.12",
     "@types/react": "18.0.17",
     "concurrently": "^7.4.0",
