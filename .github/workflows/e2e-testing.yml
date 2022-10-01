@@ -13,7 +13,7 @@ jobs:
           node-version: 16
       - run: npm install
       - name: Cypress run
-        uses: cypress-io/github-action@v4.x.x  # use the explicit version number
+        uses: cypress-io/github-action@v4  # use the explicit version number
         with:
           runTests: false
           run: npm run test:e2e
