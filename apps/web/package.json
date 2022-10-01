@@ -13,23 +13,23 @@
     "server:dev": "json-server --watch db.json --port 8080"
   },
   "dependencies": {
+    "@developars/ui": "*",
     "axios": "^0.27.2",
     "next": "12.3.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@developars/tsconfig": "*",
+    "@developars/eslint-config-custom": "*",
     "@babel/core": "^7.0.0",
     "@types/node": "^17.0.12",
     "@types/react": "18.0.17",
     "concurrently": "^7.4.0",
     "cypress": "^10.9.0",
     "eslint": "7.32.0",
-    "eslint-config-custom": "*",
     "json-server": "^0.17.0",
     "next-transpile-modules": "9.0.0",
-    "tsconfig": "*",
     "typescript": "^4.5.3"
   }
 }

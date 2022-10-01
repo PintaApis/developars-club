@@ -1,3 +1,5 @@
+import { Button } from '@developars/ui';
+
 export default function Home() {
   return (
     <div>
@@ -9,6 +11,7 @@ export default function Home() {
         <div data-test="developer-profile"><h2>John Smith</h2></div>
       </div>
       <p>Hecho con ❤️ por la <a href="https://discord.gg/carlosazaustre">PintaAPis Developer Community</a></p>
+      <p><Button text="Yay!"/></p>
     </div>
   );
 }
