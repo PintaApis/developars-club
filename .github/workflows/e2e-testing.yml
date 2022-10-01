@@ -13,4 +13,5 @@ jobs:
         timeout-minutes: 10
         with:
           build: npm run build
+          dev: npm run dev
           browser: chrome
