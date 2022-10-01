@@ -12,8 +12,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4
         with:
-          working-directory: apps/web
-          start: npm run dev
+          start: npm run dev && npm run server:test
           wait-on: http://localhost:3000
           wait-on-timeout: 60
           record: true
