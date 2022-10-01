@@ -1,8 +1,17 @@
 # Developars.club
 
-Plataforma de perfiles de desarrollo. Creada por y para la comunidad. 
+[![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+![GitHub issues](https://img.shields.io/github/issues/PintaApis/developars-club)
+[![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](http://www.firsttimersonly.com/)
+[![Open Source Helpers](https://www.codetriage.com/pintaapis/developars-club/badges/users.svg)](https://www.codetriage.com/pintaapis/developars-club)
+[![Discord](https://img.shields.io/discord/785146214122651688?color=white&label=Discord%20Community&logo=discord)](https://carlosazaustre.es/discord)
+![GitHub Repo stars](https://img.shields.io/github/stars/PintaApis/developars-club?style=social)
+![GitHub forks](https://img.shields.io/github/forks/PintaApis/developars-club?style=social)
 
-Con propósitos educativos con la idea de crear un producto.
+
+>Plataforma Open Source de perfiles de desarrollo. Creada por y para la comunidad. 
+>
+>Con propósitos educativos con la idea de crear un producto.
 
 ## ¿Cómo está estructurado el código?
 
@@ -40,6 +49,22 @@ Para desarrollar el proyecto, se debe ejecutar el siguiente comando:
 cd my-turborepo
 npm run dev
 ```
+
+### Test
+Para lanzar los tests *end-to-end* de la app, tienes dos formas. Si los quieres  lanzar en modo gráfico, ejecuta:
+
+```
+npm run test:e2e:open
+```
+
+Si los quieres lanzar en modo consola, ejecuta:
+
+```
+npm run test:e2e
+```
+
+> Recuerda tener abierta la aplicación en otra terminal con `npm run dev` para que los tests puedan ejecutarse.
+
 
 ### Remote Caching
 

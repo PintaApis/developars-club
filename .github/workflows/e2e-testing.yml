@@ -1,0 +1,41 @@
+name: E2E Testing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'apps/**'
+      - '.github/workflows/**'
+
+jobs:
+  cypress:
+    name: Testing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: 'npm'
+      - name: Install Dependencies
+        run: npm install --frozen-lockfile
+      - name: Run Cypress for Web App
+        uses: cypress-io/github-action@v4
+        with:
+          working-directory: apps/web
+          start: npm run test:e2e
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+          record: true
+          browser: chrome

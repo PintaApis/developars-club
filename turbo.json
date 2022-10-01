@@ -10,6 +10,14 @@
     },
     "dev": {
       "cache": false
+    },
+    "test:e2e": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test:e2e:open": {
+      "dependsOn": ["^build"],
+      "outputs": []
     }
   }
 }

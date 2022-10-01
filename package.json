@@ -11,13 +11,17 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test:e2e": "turbo run test:e2e",
+    "test:e2e:open": "turbo run test:e2e:open"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@developars/eslint-config-custom": "*",
+    "@developars/prettier-config": "latest",
     "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
-    "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
