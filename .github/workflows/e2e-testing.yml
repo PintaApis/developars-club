@@ -8,9 +8,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-
       - name: Cypress run
-        uses: cypress-io/github-action@v4.x.x # use the explicit version number
+        uses: cypress-io/github-action@v4.2.0
+        timeout-minutes: 10
         with:
-          runTests: false
-        - run: npm run test:e2e
+          start: npm start
+          browser: chrome
