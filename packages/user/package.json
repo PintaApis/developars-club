@@ -1,0 +1,21 @@
+{
+	"name": "@developars/user",
+	"version": "0.0.0",
+	"main": "./src/index.tsx",
+	"types": "./src/index.tsx",
+	"license": "MIT",
+	"scripts": {
+		"lint": "eslint . --ext .ts",
+		"test:unit": "jest",
+		"test:unit:watch": "jest --watch",
+		"test:unit:coverage": "jest --coverage --passWithNoTests"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-config-custom": "*",
+		"jest": "^29.1.2",
+		"ts-jest": "^29.0.3",
+		"tsconfig": "*",
+		"typescript": "^4.5.2"
+	}
+}
