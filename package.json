@@ -1,31 +1,34 @@
 {
-  "name": "developars-club",
-  "version": "0.0.0",
-  "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install",
-    "test:e2e": "turbo run test:e2e",
-    "test:e2e:open": "turbo run test:e2e:open"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@developars/eslint-config-custom": "*",
-    "@developars/prettier-config": "latest",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
-    "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "packageManager": "npm@8.8.0"
+	"name": "developars-club",
+	"version": "0.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"build": "turbo run build",
+		"dev": "turbo run dev --parallel",
+		"lint": "turbo run lint",
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"prepare": "husky install",
+		"test:e2e": "concurrently \"turbo run dev --parallel\" \"turbo run test:e2e\" ",
+		"test:e2e:open": "turbo run test:e2e:open"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^17.1.2",
+		"@commitlint/config-conventional": "^17.1.0",
+		"@developars/eslint-config-custom": "*",
+		"@developars/prettier-config": "latest",
+		"husky": "^8.0.0",
+		"lint-staged": "^13.0.3",
+		"turbo": "latest"
+	},
+	"engines": {
+		"node": ">=14.0.0"
+	},
+	"packageManager": "npm@8.8.0",
+	"dependencies": {
+		"@actions/github": "^5.1.1"
+	}
 }
