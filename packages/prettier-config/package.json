@@ -1,10 +1,10 @@
 {
-    "name": "@developars/prettier-config",
-    "version": "0.0.1",
-    "main": "index.js",
-    "description": "Prettier config for developars.club project",
-    "private": true,
-    "publishConfig": {
-      "access": "public"
-    }
+  "name": "@developars/prettier-config",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "Prettier config for developars.club project",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
   }
+}

@@ -8,10 +8,9 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/PintaApis/developars-club?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/PintaApis/developars-club?style=social)
 
-
->Plataforma Open Source de perfiles de desarrollo. Creada por y para la comunidad. 
+> Plataforma Open Source de perfiles de desarrollo. Creada por y para la comunidad.
 >
->Con propósitos educativos con la idea de crear un producto.
+> Con propósitos educativos con la idea de crear un producto.
 
 ## ¿Cómo está estructurado el código?
 
@@ -36,6 +35,7 @@ Este turborepo tiene algunas herramientas adiccionales añadidas y configuradas.
 ### Build
 
 Para construir el proyecto, se debe ejecutar el siguiente comando:
+
 ```
 cd my-turborepo
 npm run build
@@ -51,7 +51,8 @@ npm run dev
 ```
 
 ### Test
-Para lanzar los tests *end-to-end* de la app, tienes dos formas. Si los quieres  lanzar en modo gráfico, ejecuta:
+
+Para lanzar los tests _end-to-end_ de la app, tienes dos formas. Si los quieres lanzar en modo gráfico, ejecuta:
 
 ```
 npm run test:e2e:open
@@ -64,7 +65,6 @@ npm run test:e2e
 ```
 
 > Recuerda tener abierta la aplicación en otra terminal con `npm run dev` para que los tests puedan ejecutarse.
-
 
 ### Remote Caching
 
@@ -84,7 +84,9 @@ Next, you can link your Turborepo to your Remote Cache by running the following 
 ```
 npx turbo link
 ```
+
 ---
+
 ## ¿Cómo contribuir al proyecto?
 
 Es un proyecto open source, por lo que cualquier persona puede contribuir. Para ello, se debe seguir el siguiente flujo de trabajo:
@@ -113,5 +115,7 @@ A continuación se listan algunos links útiles para el desarrollo de este proye
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
 
 ---
+
 ## Licencia
+
 MIT &copy; 2022 [PintaAPI Developer Community](https://discord.gg/carlosazaustre)
