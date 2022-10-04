@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar'
+import { Navbar } from '@developars/ui'
 import {
   Container,
   SimpleGrid,
@@ -29,11 +29,11 @@ export default function Home() {
             />
           </Flex>
           <Stack spacing={6}>
-            <Heading>
+            <Heading data-test="heading-title">
               Únete a la mayor comunidad profesional de Desarrolladoras/es
             </Heading>
-            <Text color={'gray.500'} fontSize={'lg'}>
-              Al hacer clic en «Aceptar y unirse», aceptas las Condiciones de uso, la Política de privacidad y la Política de cookies de LinkedIn.
+            <Text data-test="heading-text" color={'gray.500'} fontSize={'lg'}>
+              Al hacer clic en «Aceptar y unirse», aceptas las Condiciones de uso, la Política de privacidad y la Política de cookies de DevelopArs.
             </Text>
             <Input type={'email'} placeholder='Correo' />
             <Input type={'password'} placeholder='Contraseña (8+ caracteres)' />

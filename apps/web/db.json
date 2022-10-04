@@ -1,22 +1,3 @@
 {
-  "developers": [
-    {
-      "id": "1",
-      "name": "John Doe",
-      "avatar": "https://randomuser.me/api/portraits",
-      "email": "johndoe@email.com"
-    },
-    {
-      "id": "3",
-      "name": "John Smith",
-      "avatar": "https://randomuser.me/api/portraits",
-      "email": "johnsmith@email.com"
-    },
-    {
-      "id": "2",
-      "name": "Jane Doe",
-      "avatar": "https://randomuser.me/api/portraits",
-      "email": "janedoe@email.com"
-    }
-  ]
+  "developers": []
 }
