@@ -1,11 +1,11 @@
 // pages/_app.js
-import { ChakraProvider } from '@chakra-ui/react'
+import { UIProvider, theme } from '@developars/ui'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: { Component: any, pageProps: any }) {
   return (
-    <ChakraProvider>
+    <UIProvider theme={theme}>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </UIProvider>
   )
 }
 

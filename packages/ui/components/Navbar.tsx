@@ -56,7 +56,7 @@ export default function Navbar() {
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
             color={useColorModeValue('gray.800', 'white')}>
-              <Image src="/logo.png" alt="DevelopArs" width="160" height="40" />
+              <Image data-test="logo" src="/logo.png" alt="DevelopArs" width="160" height="40" />
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>

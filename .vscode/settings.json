@@ -1,3 +1,6 @@
 {
-  "conventionalCommits.scopes": ["app/web"]
+  "conventionalCommits.scopes": [
+    "app/web",
+    "package/ui"
+  ]
 }
