@@ -10,12 +10,19 @@ import {
   Input,
   Button,
 } from '@chakra-ui/react';
+import Link from 'next/link'
 import { ReactElement } from 'react';
 
 export default function Home() {
+
+  const handleLogin = () => {
+    // redirect to dashboard page
+    
+  }
+
   return (
     <Container maxW={'1128px'}>
-      <Navbar />
+      <Navbar login={false} />
       <Container maxW={'100%'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Flex>
@@ -37,7 +44,13 @@ export default function Home() {
             </Text>
             <Input type={'email'} placeholder='Correo' />
             <Input type={'password'} placeholder='Contraseña (8+ caracteres)' />
-            <Button colorScheme={'blue'}>Aceptar y unirse</Button>
+            <Button
+              as={'a'}
+              fontSize={'sm'}
+              fontWeight={400}
+              colorScheme={'blue'}
+              href={'/dashboard'}>Aceptar y unirse</Button>
+            
           </Stack>
         </SimpleGrid>
       </Container>

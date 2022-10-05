@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Flex,
@@ -22,9 +23,34 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 import Image from 'next/image'
-  
-export default function Navbar() {
+
+export default function Navbar({login}) {
   const { isOpen, onToggle } = useDisclosure();
+
+  const [itemsNav, setItemsNav] = useState([]);
+
+  useEffect(() => {
+    if(login) {
+      setItemsNav([
+        {
+          label: 'Inicio',
+          href: '#',
+        },
+        {
+          label: 'Mi red',
+          href: '#',
+        },
+        {
+          label: 'Empleos',
+          href: '#',
+        },
+        {
+          label: 'Mensajes',
+          href: '#',
+        }
+      ]);
+    }
+  }, []);
 
   return (
     <Box>
@@ -60,45 +86,69 @@ export default function Navbar() {
           </Text>
 
           <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+            <DesktopNav NAV_ITEMS={itemsNav} />
           </Flex>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Unirse
-          </Button>
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'teal.600'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
-            Iniciar sesión
-          </Button>
-        </Stack>
+        <Rightnav login={login} />
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
+        <MobileNav NAV_ITEMS={itemsNav} />
       </Collapse>
     </Box>
   );
 }
 
-const DesktopNav = () => {
+const Rightnav = ({ login }) => {
+  if(!login) {
+    return (
+      <Stack
+        flex={{ base: 1, md: 0 }}
+        justify={'flex-end'}
+        direction={'row'}
+        spacing={6}>
+        <Button
+          as={'a'}
+          fontSize={'sm'}
+          fontWeight={400}
+          variant={'link'}
+          href={'#'}>
+          Unirse
+        </Button>
+        <Button
+          display={{ base: 'none', md: 'inline-flex' }}
+          fontSize={'sm'}
+          fontWeight={600}
+          color={'white'}
+          bg={'teal.600'}
+          _hover={{
+            bg: 'pink.300',
+          }}>
+          Iniciar sesión
+        </Button>
+      </Stack>
+    );
+  } else {
+    return (
+      <Stack
+        flex={{ base: 1, md: 0 }}
+        justify={'flex-end'}
+        direction={'row'}
+        spacing={6}>
+        <Button
+          as={'a'}
+          fontSize={'sm'}
+          fontWeight={400}
+          href={'/'}>
+          Salir
+        </Button>
+      </Stack>
+    );
+  }
+}
+
+const DesktopNav = ({NAV_ITEMS}) => {
   const linkColor = useColorModeValue('gray.600', 'gray.200');
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
@@ -179,7 +229,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   );
 };
 
-const MobileNav = () => {
+const MobileNav = ({NAV_ITEMS}) => {
   return (
     <Stack
       bg={useColorModeValue('white', 'gray.800')}
@@ -248,22 +298,3 @@ interface NavItem {
   children?: Array<NavItem>;
   href?: string;
 }
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Inicio',
-    href: '#',
-  },
-  {
-    label: 'Mi red',
-    href: '#',
-  },
-  {
-    label: 'Empleos',
-    href: '#',
-  },
-  {
-    label: 'Mensajes',
-    href: '#',
-  }
-];
