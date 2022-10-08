@@ -1,4 +1,7 @@
 const ListUsers = ({ userRepository }) =>
-async () => await userRepository.findAll()
+async () => {
+  const users = await userRepository.findAll()
+  return users
+}
 
 module.exports = ListUsers

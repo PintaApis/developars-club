@@ -1,5 +1,6 @@
 module.exports = {
   CreateUser: require('./CreateUser'),
   ListUsers: require('./ListUsers'),
-  GetUserById: require('./GetUserById')
+  GetUserById: require('./GetUserById'),
+  UpdateUserSummary: require('./UpdateUserSummary')
 }

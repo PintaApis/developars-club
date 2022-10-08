@@ -7,9 +7,12 @@ const userResolvers = {
   },
   Mutation: {
     createUser: (_, { user }) => {
-      const { email, password } = user
-      const createdUser = container.cradle.createUser({ email, password })
-      return createdUser
+      const { email, password, username } = user
+      return container.cradle.createUser({ email, username, password })
+    },
+    updateUserSummary: async (_, { id, summary}) => {
+      const user = await container.cradle.updateUserSummary(id, { summary })
+      return user
     }
   }
 }

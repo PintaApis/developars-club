@@ -1,13 +1,17 @@
 exports.User = ({
-  id = null,
+  id = undefined,
   email,
   username,
   password,
+  photo = undefined,
+  summary = undefined
  }) => {
   return {
     id,
     email,
     username,
     password,
+    photo,
+    summary
   }
 }

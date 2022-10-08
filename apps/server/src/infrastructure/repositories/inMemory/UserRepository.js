@@ -8,6 +8,11 @@ exports.UserRepository = () => {
       return user
     },
     findAll: async () => db,
-    findById: async id => db.find(user => user.id === id)
+    findById: async id => db.find(user => user.id === id),
+    updateSummary: async (userId, { summary }) => {
+      const userIndex = db.findIndex(user => user.id === userId)
+      db[userIndex].summary = summary
+      return db[userIndex]
+    }
   }
 }

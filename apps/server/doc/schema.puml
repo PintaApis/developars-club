@@ -1,26 +1,30 @@
 @startuml
-  object User {
+  entity User {
     id
     email
     username
     password
   }
 
-  object UserRepository {
+  class UserRepository {
     persist(user)
     findAll()
     findById(id)
   }
 
-  object uuid
+  class uuid
 
-  object CreateUser
-  object ListUsers
-  object GetUserById
+  class CreateUser
+  class ListUsers
+  class GetUserById
 
-  object container
+  class container
 
-  object Graphql
+  class Graphql {
+    Query: ListUsers()
+    Query: GetUserById(ID)
+    Mutation: CreateUser(UserInput)
+  }
 
   uuid -> UserRepository
 
