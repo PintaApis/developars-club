@@ -1,7 +1,7 @@
 const { User } = require("../../../domain/entities/User")
 const { UserRepository } = require("../../../infrastructure/repositories/inMemory/UserRepository")
-const { CreateUser } = require('./CreateUser')
-const { GetUserById } = require("./GetUserById")
+const CreateUser = require('./CreateUser')
+const GetUserById = require("./GetUserById")
 
 const makeSut = () => {
   const validUser = { email: 'any_email', username: 'any_username', password: 'any_password'}
@@ -24,5 +24,3 @@ describe(' UseCase getUserById', () => {
     expect(user.id).toBe('1')
   })
 })
-
-GetUserById

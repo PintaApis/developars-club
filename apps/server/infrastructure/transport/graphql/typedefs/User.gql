@@ -2,7 +2,7 @@ type User {
   id: ID
   email: String
   username: String
-  profile: Profile
+  # profile: Profile
 }
 
 input UserInput {
