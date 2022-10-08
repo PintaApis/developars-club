@@ -1,6 +1,6 @@
 const { User } = require("../../../domain/entities/User")
 const { UserRepository } = require("../../../infrastructure/repositories/inMemory/UserRepository")
-const { createUser } = require("./createUser")
+const { CreateUser } = require("./createUser")
 
 const makeSut = () => {
   const validUser = { email: 'any_email', username: 'any_username', password: 'any_password'}
@@ -8,7 +8,7 @@ const makeSut = () => {
   return {
     validUser,
     userRepository,
-    sut: createUser({ userRepository, User})
+    sut: CreateUser({ userRepository, User})
   }
 }
 

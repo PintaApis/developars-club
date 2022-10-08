@@ -6,6 +6,7 @@ exports.UserRepository = () => {
       user.id = `${++lastId}`
       db.push(user)
       return user
-    }
+    },
+    findAll: async => db
   }
 }
