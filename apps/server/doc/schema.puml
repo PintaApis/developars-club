@@ -1,0 +1,38 @@
+@startuml
+  object User {
+    id
+    email
+    username
+    password
+  }
+
+  object UserRepository {
+    persist(user)
+    findAll()
+    findById(id)
+  }
+
+  object uuid
+
+  object CreateUser
+  object ListUsers
+  object GetUserById
+
+  object container
+
+  object Graphql
+
+  uuid -> UserRepository
+
+  User --> CreateUser
+  UserRepository --> CreateUser
+  UserRepository --> ListUsers
+  UserRepository --> GetUserById
+
+  CreateUser --> container
+  ListUsers --> container
+  GetUserById --> container
+
+  container -> Graphql
+
+@enduml
