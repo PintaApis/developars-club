@@ -1,5 +1,5 @@
 exports.User = ({
-  id,
+  id = null,
   email,
   username,
   password,
