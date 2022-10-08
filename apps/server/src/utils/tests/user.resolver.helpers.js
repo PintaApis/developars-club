@@ -13,7 +13,7 @@ module.exports = {
       }
     },
   }),
-  updateUserSummaryHelper: ({ updateUserSummaryId, summary}) => ({
+  updateUserSummaryHelper: (updateUserSummaryId, summary) => ({
     query: `mutation UpdateUserSummary($updateUserSummaryId: ID!, $summary: String!) {
       updateUserSummary(id: $updateUserSummaryId, summary: $summary) {
         id email username photo summary
@@ -23,5 +23,22 @@ module.exports = {
       updateUserSummaryId,
       summary: summary
     }
+  }),
+  getUserByIdHelper: id => ({
+    query: `query GetUserById($getUserByIdId: ID!) {
+      getUserById(id: $getUserByIdId) {
+        id email username photo summary
+      }
+    }`,
+    variables: {
+      getUserByIdId: `${id}`
+    }
+  }),
+  listUsersHelper: () => ({
+    query: `query ListUsers {
+      listUsers {
+        id email username photo summary
+      }
+    }`
   })
 }
