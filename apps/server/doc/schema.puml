@@ -17,6 +17,7 @@
   class CreateUser
   class ListUsers
   class GetUserById
+  class UpdateUserSummary
 
   class container
 
@@ -24,18 +25,21 @@
     Query: ListUsers()
     Query: GetUserById(ID)
     Mutation: CreateUser(UserInput)
+    Mutation: UpdateUserSummary(ID, summary)
   }
 
-  uuid -> UserRepository
+  uuid --> UserRepository
 
   User --> CreateUser
   UserRepository --> CreateUser
   UserRepository --> ListUsers
   UserRepository --> GetUserById
+  UserRepository --> UpdateUserSummary
 
   CreateUser --> container
   ListUsers --> container
   GetUserById --> container
+  UpdateUserSummary --> container
 
   container -> Graphql
 
