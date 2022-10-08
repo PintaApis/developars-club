@@ -7,6 +7,7 @@ exports.UserRepository = () => {
       db.push(user)
       return user
     },
-    findAll: async => db
+    findAll: async () => db,
+    findById: async id => db.find(user => user.id === id)
   }
 }
