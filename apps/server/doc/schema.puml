@@ -1,0 +1,46 @@
+@startuml
+  entity User {
+    id
+    email
+    username
+    password
+  }
+
+  class UserRepository {
+    persist(user)
+    findAll()
+    findById(id)
+  }
+
+  class uuid
+
+  class CreateUser
+  class ListUsers
+  class GetUserById
+  class UpdateUserSummary
+
+  class container
+
+  class Graphql {
+    Query: ListUsers()
+    Query: GetUserById(ID)
+    Mutation: CreateUser(UserInput)
+    Mutation: UpdateUserSummary(ID, summary)
+  }
+
+  uuid --> UserRepository
+
+  User --> CreateUser
+  UserRepository --> CreateUser
+  UserRepository --> ListUsers
+  UserRepository --> GetUserById
+  UserRepository --> UpdateUserSummary
+
+  CreateUser --> container
+  ListUsers --> container
+  GetUserById --> container
+  UpdateUserSummary --> container
+
+  container -> Graphql
+
+@enduml
