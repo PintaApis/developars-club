@@ -1,16 +1,19 @@
 const { asFunction, asValue } = require('awilix')
-const { CreateUser, ListUsers, GetUserById, UpdateUserSummary } = require('../../application/usecase/user')
+const {
+  CreateUser,
+  ListUsers,
+  GetUserById,
+  UpdateUserSummary
+} = require('../../application/usecase/user')
 const { User } = require('../../domain/entities/User')
-const { UserRepository } = require('../repositories/inMemory/UserRepository')
 
-const makeUserContainer = container => {
-  
+const makeUserContainer = (container, repository) => {
   container.register({
     createUser: asFunction(CreateUser),
     listUsers: asFunction(ListUsers),
     getUserById: asFunction(GetUserById),
     updateUserSummary: asFunction(UpdateUserSummary),
-    userRepository: asFunction(UserRepository).singleton(),
+    userRepository: asFunction(repository.users).singleton(),
     User: asValue(User)
   })
   return {

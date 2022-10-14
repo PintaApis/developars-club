@@ -5,7 +5,7 @@ exports.User = ({
   password,
   photo = undefined,
   summary = undefined
- }) => {
+}) => {
   return {
     id,
     email,
