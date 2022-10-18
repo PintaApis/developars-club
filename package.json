@@ -13,7 +13,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,json}\"",
     "prepare": "husky install",
     "test:e2e": "concurrently \"turbo run dev --parallel\" \"turbo run test:e2e\" ",
-    "test:e2e:open": "turbo run test:e2e:open"
+    "test:e2e:open": "turbo run test:e2e:open",
+    "test:server": "turbo run test:server"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",

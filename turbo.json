@@ -18,6 +18,9 @@
     "test:e2e:open": {
       "dependsOn": ["^build"],
       "outputs": []
+    },
+    "test:server": {
+      "cache": false
     }
   }
 }
