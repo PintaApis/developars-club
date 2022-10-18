@@ -14,7 +14,7 @@
 
 ## ¿Cómo está estructurado el código?
 
-Este proyecto utiliza [Turborepo](https://turborepo.com/) para manejar los paquetes de forma monorepo. Cada paquete tiene su propia documentación y se encuentra en la carpeta `packages`. Las aplicaciones se encuentran en la capreta `apps`.
+Este proyecto utiliza [Turborepo](https://turborepo.com/) para manejar los paquetes de forma monorepo. Cada paquete tiene su propia documentación y se encuentra en la carpeta `packages`. Las aplicaciones se encuentran en la carpeta `apps`.
 
 Este turborepo usa [npm](https://www.npmjs.com/) como package manager. Incluye los siguientes packages/apps:
 
@@ -26,7 +26,7 @@ Este turborepo usa [npm](https://www.npmjs.com/) como package manager. Incluye l
 
 ### Utilidades
 
-Este turborepo tiene algunas herramientas adiccionales añadidas y configuradas.
+Este turborepo tiene algunas herramientas adicionales añadidas y configuradas.
 
 - [TypeScript](https://www.typescriptlang.org/) para el tipado estático.
 - [ESLint](https://eslint.org/) para el linting.
