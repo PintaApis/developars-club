@@ -1,4 +1,5 @@
-const UpdateUserSummary = ({ userRepository }) =>
-async (userId, { summary }) => userRepository.updateSummary(userId, { summary })
+const UpdateUserSummary = ({ userRepository }) => async (userId, { summary }) => {
+  return userRepository.updateSummary(userId, { summary })
+}
 
 module.exports = UpdateUserSummary
